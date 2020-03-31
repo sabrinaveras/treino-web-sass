@@ -89,3 +89,26 @@ Number
 
 https://sass-lang.com/documentation/modules
 */
+
+// Lists e Maps
+
+// list - qualquer conjunto de valores que pode ser separado por espaço ou vírgula
+// o primeiro índice é o 1 e não o 0
+$my-list: 35px 15px 80% 41rem;
+//$my-list: 35px, 15px, 80%, 41rem;
+
+.container{
+    margin: $my-list;
+    top: nth($my-list, 1); // 35px
+}
+
+
+//map - indica o nome, não armazena valors de acordo com o índice
+$my-map: (
+    demo: #FF0000;
+    paid: #00FF00;
+);
+
+.box{
+    color: map-get($color, demo);
+}
