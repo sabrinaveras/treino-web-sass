@@ -8,3 +8,21 @@ $my-class: color;
     margin: auto;
     #{$my-class}: red; // color: red;
 }
+
+/* Controle de Fluxo - @if e @else */
+$my-number: 5px;
+
+@if $my-number > 3{
+
+    .class{
+        color: red;
+
+        @if true{
+            background: black;
+        }
+    }
+} @else {
+    .class{
+        color: blue;
+    }
+}
