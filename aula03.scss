@@ -1,0 +1,10 @@
+
+/* interpolação */
+
+//interpolação é que basicamente significa encaixar valores dentro de outros valores.
+$my-class: color;
+
+.class-#{$my-class}{ //.class-color
+    margin: auto;
+    #{$my-class}: red; // color: red;
+}
