@@ -1,0 +1,16 @@
+$my-var: 5px;
+
+.my-class{
+    top: $my-var;
+    $my-var2: red;
+    color: $my-var2;
+}
+
+// variáveis globais x variáveis por escopo
+/*
+    Por padrão, todas variáveis definidas foras de qualquer seletor, são consideradas globais.
+    Isso significa que elas podem ser acessíveis em qualquer lugar da folha de estilo.
+    Por exemplo, eis uma variável global: $my-var: 5px;
+
+
+*/
