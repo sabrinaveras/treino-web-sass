@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    .title{
+        color: red;
+        margin: {  /* evitar repetição de palavras */
+            top: 5px;
+            bottom: 10px;
+            right: 20px;
+        }
+    }
+
+    .text{
+        color: green;
+    }
+
+    &:hover{ /* alinhando o seletor */
+        width: 150px;
+    }
+}
