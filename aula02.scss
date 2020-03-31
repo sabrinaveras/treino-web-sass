@@ -12,5 +12,30 @@ $my-var: 5px;
     Isso significa que elas podem ser acessíveis em qualquer lugar da folha de estilo.
     Por exemplo, eis uma variável global: $my-var: 5px;
 
+    Por outro lado, variáveis locais são aquelas declaradas dentro de um seletor.
+    Aqui, definimos uma mixin e então a variável $my-var2 dentro.
+    Essa variável é local e, assim, visível apenas para o código dentro da mixin.
 
+*/
+
+
+// Tipos de Dados
+
+/*
+
+Booleans - São simplesmente os valores “true” e “false”.
+
+Colors - São aqueles valores para indicar cores, como RGB (rbg(25,15,35)) ou
+hexadecimal (#1E79A2).
+
+Null - Apenas indica o valor null, que podemos usar caso algo não esteja
+presente em nosso código Sass.
+
+Numbers - São os valores que indicamos com dígitos, mesmo se estiverem com
+alguma unidade de medida, como 35, 12px, 83%, etc.
+
+Strings - São todos os valores restantes que não se encaixam nas categorias
+anteriores, como nome de classes e nome de fontes.
+
+Lists e Maps - São como os Arrays presentes em linguagens de programação.
 */
