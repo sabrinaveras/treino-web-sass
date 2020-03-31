@@ -112,3 +112,14 @@ $my-map: (
 .box{
     color: map-get($color, demo);
 }
+
+
+
+// Desafio
+
+$my-colors: red green blue;
+
+.my-class{
+    color: mix( nth($my-colors, 1), nth($my-colors, 3));
+    //color: purple;
+}
