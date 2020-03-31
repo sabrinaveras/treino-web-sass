@@ -1,3 +1,17 @@
+@import "style2";
+
+/*
+Se o arquivo não tive o simbolo _ antes do nome será criado um novo arquivo css
+com o contúdo dentro.
+
+Quando se coloca o _ no começo do nome é um indicativo de uma partial, ou seja,
+só um arquivo parcial com um pedaço de código que não é para ser compilado porque
+ele vai ser utilizado por outro arquivo
+
+No momento da importação não precisa colocar o _ somente o nome do arquivo
+*/
+
+
 .container{
     width: 100%;
     .title{
