@@ -39,3 +39,53 @@ anteriores, como nome de classes e nome de fontes.
 
 Lists e Maps - São como os Arrays presentes em linguagens de programação.
 */
+
+
+// Usando as funções
+
+/*
+
+Color
+    mix()
+        mix($color1, $color2, $weight: 50%) //=> color
+        Returns a number that’s a mixture of $color1 and $color2.
+
+        Both the $weight and the relative opacity of each color determines how
+        much of each color is in the result. The $weight must be a number
+        between 0% and 100% (inclusive). A larger weight indicates that more of
+        $color1 should be used, and a smaller weight indicates that more of $color2
+        should be used.
+
+        color.mix(#036, #d2e1dd); // #698aa2
+        color.mix(#036, #d2e1dd, 75%); // #355f84
+        color.mix(#036, #d2e1dd, 25%); // #9eb6bf
+        color.mix(rgba(242, 236, 228, 0.5), #6b717f); // rgba(141, 144, 152, 0.75)
+
+    darker()
+        darken($color, $amount) //=> color
+        Makes $color darker.
+
+            // #036 has lightness 20%, so when darken() subtracts 30% it just returns black.
+            darken(#036, 30%); // black
+
+Number
+    percentage()
+        percentage($number) //=> number
+        Converts a unitless $number (usually a decimal between 0 and 1) to a percentage.
+        This function is identical to $number * 100%.
+
+            math.percentage(0.2); // 20%
+            math.percentage(100px / 50px); // 200%
+
+
+    round()
+        round($number) //=> number
+        Rounds $number to the nearest whole number.
+
+            math.round(4); // 4
+            math.round(4.2); // 4
+            math.round(4.9); // 5
+
+
+https://sass-lang.com/documentation/modules
+*/
