@@ -127,3 +127,26 @@ $controller: 0;
     width: 100%
 }
 */
+
+
+/* desafio */
+
+// gerar classes automaticamente com widh diferentes
+
+@function increase($value){
+
+    @if($value > 3){
+        @return $value * 110;
+    } @else {
+        @return $value * 100;
+    }
+}
+
+
+@for $count from 1 through 5{
+
+    .my-class-#{$count}{
+        width: increase($count);
+    }
+
+}
