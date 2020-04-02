@@ -20,6 +20,12 @@ Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles
     padding: $values;
 }
 
+@mixin links{
+    text-decoration: none;
+    color: black;
+    @content;  // aqui está indicando que todo o bloco de código links ele vai entrar em content;
+}
+
 .my-box{
 
     font-size: 18px;
@@ -28,6 +34,15 @@ Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles
     @include padding-mixin(50px, 10px, 20px, 40px);
     //@include padding-mixin(50px 10px 20px 40px);
     //@include padding-mixin(50px 10px);
+    a{
+        @include links{
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
+        };
+    }
+
 }
 
 /*
@@ -41,6 +56,16 @@ Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles
     padding: 50px, 10px, 20px, 40px;
     //padding: 50px 10px 20px 40px;
     //padding: 50px 10px;
+}
+
+.my-box a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.my-class a:hover{
+    color: red;
 }
 
 */
