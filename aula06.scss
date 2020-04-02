@@ -1,0 +1,48 @@
+/* Sass e o estilo BEM */
+
+/*
+BEM é uma metodologia, uma convenção, um padrão de nomenclatura que utilizamos
+para manter o nosso projeto simples e organizado. O principal objetivo dessa
+metodologia, além de manter os códigos simples na hora da escrita e
+(principalmente) da manutenção, é fazer com que qualquer desenvolvedor possa ter
+total autonomia para mexer em qualquer tipo de projeto — seja um projeto que você
+já conheça ou um projeto no qual você acabou de entrar.
+
+Essa metodologia é aplicada na nomenclatura das classes CSS dos nossos elementos
+HTML. A sigla BEM significa Block Element Modifier, em português, Bloco Elemento
+Modificador — esses 3 pilares são as bases dessa metodologia e também são as
+categorias nas quais vamos dividir nossos elementos.
+*/
+
+// exemplo css
+
+/*
+.box{
+
+}
+
+.box__button{ (.box .button)  // button pertence ao elemento .box
+
+}
+
+..................
+
+.box--error{  // estado é usado traços no lugar
+
+}
+*/
+
+
+// usando o scss
+
+.box{
+    border: 1px solid black;
+
+    &__button{
+        color: red;
+    }
+
+    &--error{
+        background-color: red;
+    }
+}
