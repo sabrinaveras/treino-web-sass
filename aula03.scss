@@ -26,3 +26,79 @@ $my-number: 5px;
         color: blue;
     }
 }
+
+
+/* Laços de repetições - @for, @each e @while */
+
+
+@for $count from 1 through 3{
+    .class-#{$count}{
+        color: red;
+    }
+}
+
+/*
+.class-1{
+    color: red
+}
+.class-2{
+    color: red
+}
+.class-3{
+    color: red
+}
+*/
+
+$my-colors: "red", "green", "blue";
+
+@each $color in $my-colors{
+    .btn-#{$color}{
+        background-color: $color;
+    }
+}
+
+/*
+.btn-red{
+    background-color: red;
+}
+
+.btn-green{
+    background-color: green;
+}
+
+.btn-blue{
+    background-color: blue;
+}
+*/
+
+$controller: 0;
+
+@while $controller < 5{
+    .my-class-#{$controller}{
+        padding: 50px;
+    }
+
+    $controller: $controller + 1;
+}
+
+/*
+.my-class-0{
+    padding: 50px
+}
+
+.my-class-1{
+    padding: 50px
+}
+
+.my-class-2{
+    padding: 50px
+}
+
+.my-class-3{
+    padding: 50px
+}
+
+.my-class-4{
+    padding: 50px
+}
+*/
