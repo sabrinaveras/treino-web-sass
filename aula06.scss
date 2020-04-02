@@ -46,3 +46,32 @@ categorias nas quais vamos dividir nossos elementos.
         background-color: red;
     }
 }
+
+
+
+// Sass e o ITCSS
+
+/*
+O ITCSS é uma estrutura para que tenhamos uma arquitetura CSS mais organizada.
+Basicamente a ideia é visualizar o CSS em diferentes camadas separadas, que, ao
+serem montadas formam um triângulo de cabeça para baixo.
+
+Camadas do ITCSS
+           \_____________/_______ Setting - Variables
+Inverted    \___________/_______ Tools - Functions
+Triangle     \_________/________ Generic - 3rd party
+Cascading     \_______/_________ Base - Bare Element
+Style          \_____/__________ Objects - Layout classes
+Sheets          \___/___________ Components - UI classes
+                 \ /____________ Trumps - Ids and !@import
+
+Repare que as camadas estão organizadas das mais genéricas para as mais específicas.
+*/
+
+@import "itcss/1_settings/_settings"; // settings está importando variables, e aula06 está imporando settings
+@import "itcss/2_tools/tools";
+@import "itcss/3_generic/generic";
+@import "itcss/4_base/base";
+@import "itcss/5_objects/objects";
+@import "itcss/6_components/components";
+@import "itcss/7_trumps/trumps";

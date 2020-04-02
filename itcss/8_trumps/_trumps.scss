@@ -1,0 +1,15 @@
+
+/*
+    Essa camada é responsável pela maior especificidade das demais,
+    permitindo o uso de !important. Normalmente a ideia para utilização dos trumps
+    é que eles sejam usados para estilos onde independe de tudo o mesmo seja
+    aplicado e não sobreescrito.
+*/
+
+.hidden{
+    display: none !important;
+}
+
+.error{
+    color: red !important;
+}

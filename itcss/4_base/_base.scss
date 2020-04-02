@@ -1,0 +1,18 @@
+
+/*
+    Nessa camada vamos definir seletores básicos, é a última camada que irá usar
+    seletores por tags. Atenção, nessa camada, nada de usar seletores por id ou
+    classes, apenas seletores por tag (elementos).
+*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: black;
+}

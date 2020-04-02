@@ -1,0 +1,17 @@
+
+/*
+    Aqui é onde vamos colocar e criar nossos mixins ou funções para a construção
+    dos nossos estilos e layouts.
+*/
+
+@mixin full(){
+    height: 100vh;
+    width: 100vw;
+}
+
+@function add($valueOne, $valueTwo){
+    @return $valueOne + $valueTwo;
+}
+
+
+// Se você não tiver usando nenhum processador, essa camada não vai existir
