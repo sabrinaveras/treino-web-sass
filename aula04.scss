@@ -9,27 +9,38 @@ Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles
  Colocar em arquivos separados e usar o @import para deixar mais organizado
 */
 
-@mixin error-box{
-    border: 1px solid red;
-    color: red;
+@mixin error-box($border-width: 10px, $color: red){ // valor padrão, caso o usuário não passe argumento
+    border: $border-width solid $color;
+    color: $color;
     background-color: white;
 }
 
-.my-box{
-    font-size: 18px;
-    padding: 10px;
 
-    @include error-box;
+@mixin padding-mixin($values...){  // com os três pontos a variável vai aceitar qualquer valor que for passado
+    padding: $values;
+}
+
+.my-box{
+
+    font-size: 18px;
+
+    @include error-box(50px);
+    @include padding-mixin(50px, 10px, 20px, 40px);
+    //@include padding-mixin(50px 10px 20px 40px);
+    //@include padding-mixin(50px 10px);
 }
 
 /*
 .my-box{
     font-size: 18px;
-    padding: 10px;
 
-    border: 1px solid red;
+    border: 50px solid red;
     color: red;
     background-color: white;
+
+    padding: 50px, 10px, 20px, 40px;
+    //padding: 50px 10px 20px 40px;
+    //padding: 50px 10px;
 }
 
 */
