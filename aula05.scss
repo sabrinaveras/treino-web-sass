@@ -1,0 +1,29 @@
+
+/* Conhecendo o @extend */
+.btn{
+    min-width: 150px;
+    padding: 10px 20px;
+}
+
+.btn-confirm{
+    background-color: green;
+    color: white;
+    @extend .btn;
+}
+
+/*
+
+// se for um mixin ele injetaria o código de btn dentro de btn-confirm
+// porém ele agrupou btn-confirm com btn, evitando repetição
+
+.btn, .btn-confirm{
+    min-width: 150px;
+    padding: 10px 20px;
+}
+
+.btn-confirm{
+    background-color: green;
+    color: white;
+}
+
+*/
