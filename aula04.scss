@@ -69,3 +69,40 @@ Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles
 }
 
 */
+
+
+/* desafio */
+
+// criar dois mixin, o primeiro indicando um @media (min-width e max-width) e outro para indicar as
+//dimensões com uma linha apenas
+
+@mixin screen-size($min: 100px, $max: 300px){
+    @media (min-width: $min) and (max-width: $max){
+        @content;
+    }
+}
+
+@mixin size($size){
+    width: $size;
+    height: $size;
+}
+
+@include screen-size(320px, 790px){
+    .my-class{
+        color: red;
+        font-size: 20px;
+        @include size(100px);
+    }
+}
+
+
+/*
+@media (min-width: 320px) and (max-width: 790px){
+    .my-class{
+        color: red;
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}
+*/
