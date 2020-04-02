@@ -1,6 +1,6 @@
 
 /* Conhecendo o @extend */
-.btn{
+%btn{  // placeholder - eles são omitidos no css
     min-width: 150px;
     padding: 10px 20px;
 }
@@ -8,7 +8,13 @@
 .btn-confirm{
     background-color: green;
     color: white;
-    @extend .btn;
+    @extend %btn;
+}
+
+.btn-cancel{
+    background-color: red;
+    color: white;
+    @extend %btn;
 }
 
 /*
@@ -16,7 +22,7 @@
 // se for um mixin ele injetaria o código de btn dentro de btn-confirm
 // porém ele agrupou btn-confirm com btn, evitando repetição
 
-.btn, .btn-confirm{
+.btn-confirm, btn-cancel{
     min-width: 150px;
     padding: 10px 20px;
 }
@@ -25,5 +31,17 @@
     background-color: green;
     color: white;
 }
+
+*/
+
+/*
+Quando usar mixin e placeholder ?
+
+placeholder ele vai fazer com que todo os seletores onde a gente está usando fiquem
+juntos em um lugar só evitando a repetição.
+
+mixins aceitam argumentos e blocos de códigos então podemos alterar os valores e condições,
+os mixins podem ser sempre variáveis.
+
 
 */
