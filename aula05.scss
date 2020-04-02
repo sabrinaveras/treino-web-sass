@@ -88,3 +88,69 @@ os mixins podem ser sempre variáveis.
 
 
 */
+
+
+/* Desafio */
+// correção de código
+
+// código para corrigir
+.btn{
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+%btn-generic{
+    background-color: gray;
+}
+
+.btn-confirm{
+    background-color: green;
+}
+
+.btn-cancel{
+    background-color: red;
+}
+
+
+/* resultado final esperado em css
+
+.btn-generic, .btn-confirm, btn-cancel{
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+.btn-generic{
+    background-color: gray;
+}
+
+.btn-confirm{
+    background-color: green;
+}
+
+.btn-cancel{
+    background-color: red;
+}
+
+*/
+
+// minha responsta
+
+%btn{
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+.btn-generic{
+    background-color: gray;
+    @extend .btn;
+}
+
+.btn-confirm{
+    background-color: green;
+    @extend .btn;
+}
+
+.btn-cancel{
+    background-color: red;
+    @extend .btn;
+}
