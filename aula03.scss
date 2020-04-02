@@ -102,3 +102,28 @@ $controller: 0;
     padding: 50px
 }
 */
+
+
+/* Criando Funções */
+
+@function double($value){
+    @return $value * 2;
+}
+
+.my-class{
+    width: double(20px);
+}
+/*
+.my-class{
+    width: 40px
+}
+*/
+
+.my-class{
+    width: double(50%);
+}
+/*
+.my-class{
+    width: 100%
+}
+*/
