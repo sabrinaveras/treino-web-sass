@@ -1,0 +1,35 @@
+/*
+Mixins são considerados um dos elementos mais poderosos do Sass.
+Eles ajudam a definir regras que podem ser reutilizadas onde quisermos.
+
+São como funções, onde podemos passar ou não parâmetros, e eles nos retornam uma ou mais propriedades.
+Os Mixins podem ser usados de várias formas para muitas coisas. E é sobre eles que falaremos nesta seção.
+
+
+ Colocar em arquivos separados e usar o @import para deixar mais organizado
+*/
+
+@mixin error-box{
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+}
+
+.my-box{
+    font-size: 18px;
+    padding: 10px;
+
+    @include error-box;
+}
+
+/*
+.my-box{
+    font-size: 18px;
+    padding: 10px;
+
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+}
+
+*/
