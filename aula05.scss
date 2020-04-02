@@ -5,17 +5,60 @@
     padding: 10px 20px;
 }
 
-.btn-confirm{
-    background-color: green;
-    color: white;
-    @extend %btn;
+// algo para tomar cuidado quando está usando o @extend: Manter os seletores simples
+// e se você não está usando no lugar errado
+
+
+.my-container, .header, .footer{
+    .btn-confirm{
+        background-color: green;
+        color: white;
+        @extend %btn;
+        // quando for fazer o @extend ele vai pegar cada um das combinações possíveis
+    }
 }
 
-.btn-cancel{
+.modal, .table, .menu{
+    .button-group{
+        .btn-cancel{
+            background-color: red;
+            color: white;
+            @extend %btn;
+        }
+    }
+}
+
+/*  Observe sempre se seus seletores estão simples, ou isso pode acontecer
+
+// se for necessários as camadas de seletores, use um mixin, pois eles não fará isso
+
+.my-container .btn-confirm,
+.header .btn-confirm,
+.footer .btn-confirm,
+.modal .button-group .btn-cancel,
+.table .button-group .btn-cancel,
+.menu .button-group .btn-cancel{
+    min-width: 150px;
+    padding: 10px 20px;
+}
+
+.my-container .btn-confirm,
+.header .btn-confirm,
+.footer .btn-confirm{
+    background-color: green;
+    color: white;
+}
+
+.modal .button-group .btn-cancel,
+.table .button-group .btn-cancel,
+.menu .button-group .btn-cancel{
     background-color: red;
     color: white;
-    @extend %btn;
 }
+
+*/
+
+
 
 /*
 
